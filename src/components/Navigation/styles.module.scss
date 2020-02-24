@@ -1,0 +1,23 @@
+$bgColor: #0d1217;
+$linkColor: #fff;
+$linkHoverColor: #19b5fe;
+
+.nav {
+  padding: 1em;
+  background: $bgColor;
+}
+
+.item {
+  margin-right: 1em;
+  display: inline-block;
+}
+
+.link {
+  font-size: 1.2rem;
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $linkHoverColor;
+  }
+}

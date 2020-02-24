@@ -1,0 +1,58 @@
+$borderColor: rgba(25, 181, 254, 0.25);
+$headingHoverColor: #19b5fe;
+
+.fullCard {
+  display: flex;
+  border: 1px solid $borderColor;
+}
+
+.info {
+  width: 25%;
+  border-right: 1px solid $borderColor;;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.heading {
+  margin: 0.5em;
+  font-size: 1.3rem;
+}
+
+.text {
+  margin: 0.5em 0.1em;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.strongText {
+  font-weight: bold;
+}
+
+.stars {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 0.5em;
+  border-bottom: 1px solid $borderColor;
+}
+
+.starImg {
+  width: 1em;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.content {
+  padding: 0.5em;
+  width: 75%;
+}
+
+.img {
+  width: 100%;
+}
