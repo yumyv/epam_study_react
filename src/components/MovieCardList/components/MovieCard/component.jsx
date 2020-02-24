@@ -48,7 +48,7 @@ export class MovieCard extends React.Component {
     const {movie} = this.props;
 
     return (
-        <article className={styles.movieCard} data-id={movie.id}>
+        <article className={styles.movieCard}>
           <div className={styles.container}>
             <div className={styles.likes}>
               <div className={styles.likesContainer}>
