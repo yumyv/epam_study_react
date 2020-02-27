@@ -44,8 +44,7 @@ export class Homepage extends React.Component {
         movieFromState.likes += 1;
         return state;
       });
-    }
-    if (event.toLowerCase() === 'minus') {
+    } else if (event.toLowerCase() === 'minus') {
       this.setState(state => {
         const movieFromState = state.movies.find(elem => elem.id === movie.id);
         movieFromState.likes -= 1;

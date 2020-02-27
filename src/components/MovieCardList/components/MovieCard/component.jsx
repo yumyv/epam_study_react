@@ -1,29 +1,9 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import LikeImg from '../../../../global/img/like.png';
-import FullStarImg from '../../../../global/img/fullStar.png';
-import EmptyStarImg from '../../../../global/img/emptyStar.png';
+import {RatingStars} from '../../../RatingStars';
 
 export class MovieCard extends React.Component {
-
-  renderStars(countOfStars) {
-    const MAXIMUM_STARS = 5;
-    return (
-        <>
-          {
-            [...Array(MAXIMUM_STARS)].map((elem, i) => {
-                  return i < countOfStars ?
-                      <img onClick={this.changeCountOfStars} className={styles.starImg} src={FullStarImg} alt="full star"
-                           data-index={i + 1} key={i}/> :
-                      <img onClick={this.changeCountOfStars} className={styles.starImg} src={EmptyStarImg} alt="empty star"
-                           data-index={i + 1} key={i}/>
-                }
-            )
-          }
-        </>
-    );
-  }
-
   addCurrentMovie = () => {
     const {movie, addCurrentMovie} = this.props;
     addCurrentMovie(movie);
@@ -39,13 +19,8 @@ export class MovieCard extends React.Component {
     changeCountOfLikes(movie, 'minus');
   };
 
-  changeCountOfStars = (event) => {
-    const {movie, changeCountOfStars} = this.props;
-    changeCountOfStars(movie, event.target.getAttribute('data-index'));
-  };
-
   render() {
-    const {movie} = this.props;
+    const {movie, changeCountOfStars} = this.props;
 
     return (
         <article className={styles.movieCard}>
@@ -67,7 +42,7 @@ export class MovieCard extends React.Component {
             </div>
           </div>
           <div className={styles.stars}>
-            {this.renderStars(movie.stars)}
+            <RatingStars countOfStars={movie.stars} movie={movie} changeCountOfStars={changeCountOfStars}/>
           </div>
         </article>
     );
