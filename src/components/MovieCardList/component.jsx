@@ -1,20 +1,23 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import {MovieCard} from './components/MovieCard';
+import MovieCard from './components/MovieCard';
 
 export const MovieCardList = (props) => {
-  const {movies, addCurrentMovie, changeCountOfLikes, changeCountOfStars} = props;
+  const {filteredMovies} = props;
 
-  return (
-      <section className={styles.container}>
-        {movies.map(movie =>
-            <MovieCard
-                movie={movie}
-                addCurrentMovie={addCurrentMovie}
-                changeCountOfLikes={changeCountOfLikes}
-                changeCountOfStars={changeCountOfStars}
-                key={movie.id}
-            />)}
-      </section>
-  );
+  if (filteredMovies !== null) {
+    return (
+        <section className={styles.container}>
+          {filteredMovies.map(movie =>
+              <MovieCard
+                  movie={movie}
+                  key={movie.id}
+              />)}
+        </section>
+    );
+  } else {
+    return (
+        <></>
+    );
+  }
 };

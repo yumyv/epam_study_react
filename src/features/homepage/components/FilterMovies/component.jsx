@@ -5,17 +5,16 @@ import SearchImg from '../../../../global/img/search.png';
 export class FilterMovies extends React.Component {
   filterWord = '';
 
-  onFilterWordChange = (event) => {
-    this.filterWord = event.target.value;
+  onFilterWordChange = ({target}) => {
+    this.filterWord = target.value;
   };
 
   onFilterClick = () => {
-    const {filterMovies} = this.props;
-    filterMovies(this.filterWord);
+    const {filterMoviesDispatch} = this.props;
+    filterMoviesDispatch(this.filterWord);
   };
 
   render() {
-
     return (
         <div className={styles.inputContainer}>
           <div className={styles.inputWrapper}>

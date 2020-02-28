@@ -1,26 +1,26 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import LikeImg from '../../../../global/img/like.png';
-import {RatingStars} from '../../../RatingStars';
+import RatingStars from '../../../RatingStars';
 
 export class MovieCard extends React.Component {
   addCurrentMovie = () => {
-    const {movie, addCurrentMovie} = this.props;
-    addCurrentMovie(movie);
+    const {movie, addCurrentMovieDispatch} = this.props;
+    addCurrentMovieDispatch(movie);
   };
 
   addLike = () => {
-    const {movie, changeCountOfLikes} = this.props;
-    changeCountOfLikes(movie, 'plus');
+    const {movie, changeCountOfLikesDispatch} = this.props;
+    changeCountOfLikesDispatch({movie, event: 'plus'});
   };
 
   subtractLike = () => {
-    const {movie, changeCountOfLikes} = this.props;
-    changeCountOfLikes(movie, 'minus');
+    const {movie, changeCountOfLikesDispatch} = this.props;
+    changeCountOfLikesDispatch({movie, event: 'minus'});
   };
 
   render() {
-    const {movie, changeCountOfStars} = this.props;
+    const {movie} = this.props;
 
     return (
         <article className={styles.movieCard}>
@@ -42,7 +42,7 @@ export class MovieCard extends React.Component {
             </div>
           </div>
           <div className={styles.stars}>
-            <RatingStars countOfStars={movie.stars} movie={movie} changeCountOfStars={changeCountOfStars}/>
+            <RatingStars movie={movie}/>
           </div>
         </article>
     );

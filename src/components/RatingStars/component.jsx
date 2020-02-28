@@ -5,13 +5,14 @@ import EmptyStarImg from '../../global/img/emptyStar.png';
 
 export class RatingStars extends React.Component {
   changeCountOfStars = ({target}) => {
-    const {movie, changeCountOfStars} = this.props;
-    changeCountOfStars(movie, target.getAttribute('data-index'));
+    const {movie, changeCountOfStarsDispatch} = this.props;
+    changeCountOfStarsDispatch({movie, countOfStars: target.getAttribute('data-index')});
   };
 
   render() {
     const MAXIMUM_STARS = 5;
-    const {countOfStars} = this.props;
+    const {movie} = this.props;
+    const countOfStars = movie.stars;
 
     return (
         <>

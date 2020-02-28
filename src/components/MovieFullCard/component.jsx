@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './styles.module.scss';
-import {RatingStars} from '../RatingStars';
+import RatingStars from '../RatingStars';
 
 export const MovieFullCard = (props) => {
-  const {movie, changeCountOfStars} = props;
+  const {movie} = props;
 
-  if (Object.keys(movie).length === 0) {
+  if (movie === null) {
     return (
         <h2 className={styles.text}>No movie selected. Please select a movie.</h2>
     );
@@ -18,7 +18,7 @@ export const MovieFullCard = (props) => {
               <p className={styles.text}>Likes: {movie.likes}</p>
             </div>
             <div className={styles.stars}>
-              <RatingStars countOfStars={movie.stars} movie={movie} changeCountOfStars={changeCountOfStars}/>
+              <RatingStars movie={movie}/>
             </div>
           </div>
           <div className={styles.content}>
