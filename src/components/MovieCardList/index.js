@@ -9,7 +9,8 @@ const mapStateToProps = (state) => ({
 });
 
 MovieCardList.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.object)
+  movies: PropTypes.arrayOf(PropTypes.object),
+  filterWord: PropTypes.string
 };
 
 export default connect(
