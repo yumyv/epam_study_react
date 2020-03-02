@@ -6,7 +6,7 @@ import EmptyStarImg from '../../global/img/emptyStar.png';
 export class RatingStars extends React.Component {
   changeCountOfStars = ({target}) => {
     const {movie, changeCountOfStarsDispatch} = this.props;
-    changeCountOfStarsDispatch({movie, countOfStars: target.getAttribute('data-index')});
+    changeCountOfStarsDispatch({id: movie.id, countOfStars: target.getAttribute('data-index')});
   };
 
   render() {

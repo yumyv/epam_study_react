@@ -1,14 +1,15 @@
 import {MovieCardList} from './component';
 import {connect} from 'react-redux';
-import {getFilteredMovies} from '../../features/homepage/selectors';
+import {getFilterWord, getMovies} from '../../features/homepage/selectors';
 import PropTypes from 'prop-types';
 
 const mapStateToProps = (state) => ({
-  filteredMovies: getFilteredMovies(state),
+  movies: getMovies(state),
+  filterWord: getFilterWord(state),
 });
 
 MovieCardList.propTypes = {
-  filteredMovies: PropTypes.arrayOf(PropTypes.object)
+  movies: PropTypes.arrayOf(PropTypes.object)
 };
 
 export default connect(

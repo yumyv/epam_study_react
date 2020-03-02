@@ -11,12 +11,12 @@ export class MovieCard extends React.Component {
 
   addLike = () => {
     const {movie, changeCountOfLikesDispatch} = this.props;
-    changeCountOfLikesDispatch({movie, event: 'plus'});
+    changeCountOfLikesDispatch({id: movie.id, event: 'plus'});
   };
 
   subtractLike = () => {
     const {movie, changeCountOfLikesDispatch} = this.props;
-    changeCountOfLikesDispatch({movie, event: 'minus'});
+    changeCountOfLikesDispatch({id: movie.id, event: 'minus'});
   };
 
   render() {
