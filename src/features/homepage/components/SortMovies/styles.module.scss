@@ -1,0 +1,26 @@
+$btnBg: #19b5fe;
+$btnHoverBg: #019be3;
+$btnColor: #fff;
+
+.heading {
+  margin-bottom: 0.5em;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.btnContainer {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.2em 1.5em;
+  margin-right: 2em;
+  color: $btnColor;
+  background: $btnBg;
+  border: none;
+  border-radius: 0.2em;
+
+  &:hover {
+    background: $btnHoverBg;
+  }
+}

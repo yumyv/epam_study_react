@@ -1,0 +1,27 @@
+$inputBorderColor: rgba(25, 181, 254, 0.25);
+
+.inputContainer {
+  margin: 1em;
+  text-align: center;
+}
+
+.inputWrapper {
+  width: 60%;
+  position: relative;
+  display: inline-block;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  border: solid 1px $inputBorderColor;
+}
+
+.searchImg {
+  top: 0.4em;
+  right: -1.8em;
+  width: 2em;
+  cursor: pointer;
+  position: absolute;
+}

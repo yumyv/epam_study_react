@@ -1,0 +1,73 @@
+$borderColor: rgba(25, 181, 254, 0.25);
+$headingHoverColor: #19b5fe;
+
+.movieCard {
+  margin: 0.5em;
+  width: 20em;
+  border: 1px solid $borderColor;
+}
+
+.container {
+  display: flex;
+}
+
+.likes {
+  width: 25%;
+  border-right: 1px solid $borderColor;;
+}
+
+.likesContainer {
+  padding: 0.5em;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.likeImg {
+  margin: 0.5em;
+  width: 1.5em;
+  cursor: pointer;
+}
+
+.likeImgDown {
+  transform: rotateX(180deg);
+}
+
+.text {
+  margin: 0.5em 0.1em;
+  font-size: 1.1rem;
+}
+
+.counter {
+  padding: 0.3em 0.1em;
+  text-align: center;
+  color: $headingHoverColor;
+  border-top: 1px solid $borderColor;;
+}
+
+.pic {
+  padding: 0.5em;
+  width: 75%;
+}
+
+.heading {
+  margin: 0.5em;
+  font-size: 1.3rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $headingHoverColor;
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.stars {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 0.5em;
+  border-top: 1px solid $borderColor;
+}
