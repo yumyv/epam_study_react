@@ -1,10 +1,8 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-export class SortMovies extends React.Component {
-
-  render() {
-    const {sortByLikesDispatch, sortByRatingDispatch} = this.props;
+export const SortMovies = (props) => {
+    const {sortByLikesDispatch, sortByRatingDispatch} = props;
 
     return (
         <>
@@ -15,5 +13,4 @@ export class SortMovies extends React.Component {
           </div>
         </>
     );
-  }
-}
+};

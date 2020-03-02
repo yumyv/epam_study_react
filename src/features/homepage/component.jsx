@@ -8,12 +8,10 @@ import MovieFullCard from '../../components/MovieFullCard';
 import {Footer} from '../../components/Footer';
 
 export class Homepage extends React.Component {
-  componentDidMount() {
+  render() {
     const {setBasicContentDispatch} = this.props;
     setBasicContentDispatch();
-  }
 
-  render() {
     return (
         <>
           <Navigation/>
