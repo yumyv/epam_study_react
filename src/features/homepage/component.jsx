@@ -7,6 +7,9 @@ import MovieCardList from '../../components/MovieCardList';
 import MovieFullCard from '../../components/MovieFullCard';
 import {Footer} from '../../components/Footer';
 
+import {SignIn} from '../auth/SignIn';
+import {SignUp} from '../auth/SignUp';
+
 export class Homepage extends React.Component {
   render() {
     const {setBasicContentDispatch} = this.props;
@@ -20,6 +23,10 @@ export class Homepage extends React.Component {
               <SortMovies/>
               <FilterMovies/>
               <MovieCardList/>
+
+              <SignUp/>
+              <SignIn/>
+
             </section>
             <aside className={styles.movieContainer}>
               <MovieFullCard/>

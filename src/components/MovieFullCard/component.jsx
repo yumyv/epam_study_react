@@ -27,7 +27,7 @@ export const MovieFullCard = (props) => {
               <strong className={styles.strongText}>Director: </strong>{movie.director}
             </p>
             <p className={styles.text}>
-              <strong className={styles.strongText}>Actors: </strong>{movie.actors.join(', ')}
+              <strong className={styles.strongText}>Actors: </strong>{movie.actorsIds.join(', ')}
             </p>
             <p className={styles.text}>
               <strong className={styles.strongText}>Genres: </strong>{movie.genres.join(', ')}
