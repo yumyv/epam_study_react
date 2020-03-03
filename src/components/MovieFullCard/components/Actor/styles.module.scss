@@ -1,0 +1,11 @@
+$linkHoverColor: #19b5fe;
+$linkColor: #0d47a1;
+
+.link {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $linkHoverColor;
+  }
+}

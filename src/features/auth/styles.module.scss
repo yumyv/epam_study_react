@@ -1,0 +1,60 @@
+$inputBorderColor: rgba(25, 181, 254, 0.25);
+$btnBg: #19b5fe;
+$btnHoverBg: #019be3;
+$btnColor: #fff;
+$hoverColor: #19b5fe;
+$linkColor: #0d47a1;
+
+.main {
+  padding: 3em;
+}
+
+.heading {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.label {
+  margin: 2em auto;
+  display: block;
+  max-width: 30em;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  border: solid 1px $inputBorderColor;
+}
+
+.btnContainer {
+  text-align: center;
+}
+
+.btn {
+  padding: 0.5em 4em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $btnColor;
+  background: $btnBg;
+  border: none;
+  border-radius: 0.2em;
+
+  &:hover {
+    background: $btnHoverBg;
+  }
+}
+
+.link {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $hoverColor;
+  }
+}
+
+.text {
+  margin-top: 2em;
+  text-align: center;
+}

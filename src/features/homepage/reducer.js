@@ -1,46 +1,48 @@
 import {
-  ADD_CURRENT_MOVIE,
   CHANGE_COUNT_OF_LIKES,
   CHANGE_COUNT_OF_STARS,
   FILTER_MOVIE,
-  SET_BASIC_CONTENT, SORT_BY_LIKES, SORT_BY_RATING
+  SET_BASIC_CONTENT, SORT_BY_LIKES, SORT_BY_RATING, DELETE_MOVIE, EDIT_MOVIE
 } from './actionTypes';
 import basicContent from '../../global/basicContent';
 
 const initialState = {
   movies: null,
-  currentMovie: null,
   sortedByLikesSwitcher: false,
   sortedByRatingSwitcher: false,
   filterWord: null,
+  actors: null
 };
 
 const getBasicMovies = () => {
   return basicContent.movies;
 };
 
+const getBasicActors = () => {
+  return basicContent.actors;
+};
+
 export const homepageReducer = (state = initialState, action) => {
   const {type, payload} = action;
-
-  const getCurrentMovies = () => {
-    if (state.currentMovie) {
-      return state.currentMovie.id === payload.id ?
-          state.movies.find(movie => movie.id === payload.id) : state.currentMovie;
-    } else {
-      return null;
-    }
-  };
 
   switch (type) {
     case SET_BASIC_CONTENT:
       return {
         ...state,
         movies: getBasicMovies(),
+        actors: getBasicActors()
       };
-    case ADD_CURRENT_MOVIE:
+    case DELETE_MOVIE:
       return {
         ...state,
-        currentMovie: payload
+        movies: state.movies.filter(item => item.id !== payload)
+      };
+    case EDIT_MOVIE:
+      return {
+        ...state,
+        movies: state.movies.map(item => {
+          return item.id === payload.id ? {...payload} : {...item};
+        })
       };
     case FILTER_MOVIE:
       return {
@@ -59,33 +61,15 @@ export const homepageReducer = (state = initialState, action) => {
       };
       return {
         ...state,
-        currentMovie: getCurrentMovies(),
         movies: state.movies.map((item) => {
-          if (item.id === payload.id) {
-            return {
-              ...item,
-              likes: setNewLike(item.likes)
-            }
-          }
-          return item;
+          return item.id === payload.id ? {...item, likes: setNewLike(item.likes)} : {...item};
         })
       };
     case CHANGE_COUNT_OF_STARS:
       return {
         ...state,
-        currentMovie: getCurrentMovies(),
         movies: state.movies.map((item) => {
-          if (item.id === payload.id) {
-            state.currentMovie = {
-              ...item,
-              stars: payload.countOfStars
-            };
-            return {
-              ...item,
-              stars: payload.countOfStars
-            }
-          }
-          return item;
+          return item.id === payload.id?{...item, stars: payload.countOfStars}:{...item};
         }),
       };
     case SORT_BY_LIKES:

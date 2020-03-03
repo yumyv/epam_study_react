@@ -2,13 +2,10 @@ import React from 'react';
 import styles from './styles.module.scss';
 import LikeImg from '../../../../global/img/like.png';
 import RatingStars from '../../../RatingStars';
+import {Link} from 'react-router-dom';
+import {Routes} from '../../../../global/constants';
 
 export class MovieCard extends React.Component {
-  addCurrentMovie = () => {
-    const {movie, addCurrentMovieDispatch} = this.props;
-    addCurrentMovieDispatch(movie);
-  };
-
   addLike = () => {
     const {movie, changeCountOfLikesDispatch} = this.props;
     changeCountOfLikesDispatch({id: movie.id, event: 'plus'});
@@ -37,7 +34,9 @@ export class MovieCard extends React.Component {
               </div>
             </div>
             <div className={styles.pic}>
-              <h3 onClick={this.addCurrentMovie} className={styles.heading}>{movie.title}</h3>
+              <Link className={styles.link} to={`${Routes.MOVIES}/${movie.id}`}>
+                <h3 className={styles.heading}>{movie.title}</h3>
+              </Link>
               <img className={styles.img} src={movie.posterUrl} alt={movie.title}/>
             </div>
           </div>

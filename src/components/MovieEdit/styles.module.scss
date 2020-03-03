@@ -1,0 +1,54 @@
+$btnBg: #19b5fe;
+$btnHoverBg: #019be3;
+$btnColor: #fff;
+$inputBorderColor: rgba(25, 181, 254, 0.25);
+
+.form {
+  margin: 0 auto;
+  padding: 3em;
+  max-width: 50em;
+}
+
+.label {
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  width: 80%;
+  border-radius: 0.2em;
+  border: solid 1px $inputBorderColor;
+}
+
+.textarea {
+  margin-left: 1em;
+  padding: 0.5em 1em;
+  width: 80%;
+  min-height: 10em;
+  border-radius: 0.2em;
+  border: solid 1px $inputBorderColor;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.5em 4em;
+  margin-top: 2em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $btnColor;
+  background: $btnBg;
+  border: none;
+  border-radius: 0.2em;
+
+  &:hover {
+    background: $btnHoverBg;
+  }
+}

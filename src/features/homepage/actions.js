@@ -1,18 +1,12 @@
 import {
   SET_BASIC_CONTENT,
-  ADD_CURRENT_MOVIE,
   CHANGE_COUNT_OF_LIKES,
   CHANGE_COUNT_OF_STARS,
-  FILTER_MOVIE, SORT_BY_LIKES, SORT_BY_RATING,
+  FILTER_MOVIE, SORT_BY_LIKES, SORT_BY_RATING, DELETE_MOVIE, EDIT_MOVIE,
 } from './actionTypes';
 
 export const setBasicContent = () => ({
   type: SET_BASIC_CONTENT,
-});
-
-export const addCurrentMovie = (payload) => ({
-  type: ADD_CURRENT_MOVIE,
-  payload
 });
 
 export const changeCountOfLikes = (payload) => ({
@@ -36,4 +30,14 @@ export const sortByLikes = () => ({
 
 export const sortByRating = () => ({
   type: SORT_BY_RATING
+});
+
+export const deleteMovie = (payload) => ({
+  type: DELETE_MOVIE,
+  payload
+});
+
+export const editMovie = (payload) => ({
+  type: EDIT_MOVIE,
+  payload
 });
