@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {setBasicContent} from './actions';
 import PropTypes from 'prop-types';
 import {getMovies} from './selectors';
-import {getLoggedStatus} from '../auth/selectors';
 
 const mapStateToProps = (state) => ({
   movies: getMovies(state)

@@ -2,12 +2,8 @@ import {ADD_USER, SET_LOGGED_IN, SET_LOGGED_OUT, SET_USERS} from './actionTypes'
 
 const initialState = {
   users: [],
-  isLoggedIn: false
-};
-
-const getRegisteredUsers = () => {
-  const users = JSON.parse(window.localStorage.getItem('users'));
-  return users?users:[];
+  isLoggedIn: false,
+  firstLoaded: true
 };
 
 const addUser = (user) => {
@@ -22,6 +18,16 @@ const addUser = (user) => {
 
 export const authReducer = (state = initialState, action) => {
   const {type, payload} = action;
+
+  const getRegisteredUsers = () => {
+    let users = JSON.parse(window.localStorage.getItem('users'));
+    if (!state.firstLoaded) {
+      state.firstLoaded = false;
+      return users === null?users=[]:users;
+    } else {
+      return state.users;
+    }
+  };
 
   switch (type) {
     case ADD_USER:
