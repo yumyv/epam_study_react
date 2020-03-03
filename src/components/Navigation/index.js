@@ -14,7 +14,7 @@ const mapDispatchToProps = {
 };
 
 Navigation.propTypes = {
-  isLoggedIn: PropTypes.boolean,
+  isLoggedIn: PropTypes.bool,
   setLoggedOutDispatch: PropTypes.func,
 };
 

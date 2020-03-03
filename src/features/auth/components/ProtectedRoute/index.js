@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 ProtectedRoute.propTypes = {
-  isLoggedIn: PropTypes.boolean,
+  isLoggedIn: PropTypes.bool,
 };
 
 export default connect(
