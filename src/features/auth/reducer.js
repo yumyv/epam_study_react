@@ -1,9 +1,7 @@
-import {ADD_USER, SET_LOGGED_IN, SET_LOGGED_OUT, SET_USERS} from './actionTypes';
+import {ADD_USER, SET_LOGGED_IN, SET_LOGGED_OUT} from './actionTypes';
 
 const initialState = {
-  users: [],
   isLoggedIn: false,
-  firstLoaded: true
 };
 
 const addUser = (user) => {
@@ -16,42 +14,29 @@ const addUser = (user) => {
   window.localStorage.setItem('users', JSON.stringify(users));
 };
 
+const getUsers = () => {
+  let users = JSON.parse(window.localStorage.getItem('users'));
+  return users?users:[];
+};
+
 export const authReducer = (state = initialState, action) => {
   const {type, payload} = action;
 
-  const getRegisteredUsers = () => {
-    let users = JSON.parse(window.localStorage.getItem('users'));
-    if (!state.firstLoaded) {
-      state.firstLoaded = false;
-      return users === null?users=[]:users;
-    } else {
-      return state.users;
-    }
-  };
-
   switch (type) {
     case ADD_USER:
-      const user = state.users.find(user => user.name === payload.name);
+      const user = getUsers().find(user => user.name === payload.name);
       if (user) {
         return {
           ...state
         }
       } else {
-        const users = state.users;
-        users.push(payload);
         addUser(payload);
         return {
           ...state,
-          users: users
         }
       }
-    case SET_USERS:
-      return {
-        ...state,
-        users: getRegisteredUsers()
-      };
     case SET_LOGGED_IN:
-      const loggedInUser = state.users.find(
+      const loggedInUser = getUsers().find(
           user => user.name === payload.name && user.password === payload.password
       );
       return loggedInUser?{...state, isLoggedIn: true}:{...state};

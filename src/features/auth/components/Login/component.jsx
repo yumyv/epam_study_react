@@ -15,9 +15,6 @@ export class Login extends React.Component {
   };
 
   render() {
-    const {users, setUsersDispatch} = this.props;
-    if (users.length === 0) setUsersDispatch();
-
     return (
         <main className={styles.main}>
           <h3 className={styles.heading}>Please login</h3>
