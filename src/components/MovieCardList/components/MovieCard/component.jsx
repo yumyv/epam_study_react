@@ -7,13 +7,13 @@ import {Routes} from '../../../../global/constants';
 
 export class MovieCard extends React.Component {
   addLike = () => {
-    const {movie, changeCountOfLikesDispatch} = this.props;
-    changeCountOfLikesDispatch({id: movie.id, event: 'plus'});
+    const {movie, updateLikes} = this.props;
+    updateLikes({movie: movie, event: 'plus'});
   };
 
   subtractLike = () => {
-    const {movie, changeCountOfLikesDispatch} = this.props;
-    changeCountOfLikesDispatch({id: movie.id, event: 'minus'});
+    const {movie, updateLikes} = this.props;
+    updateLikes({movie: movie, event: 'minus'});
   };
 
   render() {

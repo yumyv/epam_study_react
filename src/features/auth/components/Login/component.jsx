@@ -4,17 +4,24 @@ import {Link} from 'react-router-dom';
 import {Routes} from '../../../../global/constants';
 
 export class Login extends React.Component {
+  componentDidMount() {
+    const {isLoggedIn} = this.props;
+    if (isLoggedIn) this.props.history.push(Routes.HOMEPAGE);
+  }
+
   onLogin = (event) => {
     event.preventDefault();
-    const {setLoggedInDispatch} = this.props;
+    const {loginUser} = this.props;
     const user = {};
     user.name = this.name.value;
     user.password = this.password.value;
-    setLoggedInDispatch(user);
-    this.props.history.push(Routes.HOMEPAGE);
+    loginUser(user);
   };
 
   render() {
+    const {infoMessage, isLoggedIn} = this.props;
+    if (isLoggedIn) this.props.history.push(Routes.HOMEPAGE);
+
     return (
         <main className={styles.main}>
           <h3 className={styles.heading}>Please login</h3>
@@ -35,6 +42,7 @@ export class Login extends React.Component {
               <button onClick={this.onLogin} className={styles.btn}>Login</button>
             </div>
           </form>
+          {infoMessage?<p className={`${styles.infoText} ${styles.text}`}>{infoMessage}</p>:''}
           <p className={styles.text}>
             Don't have an account? <Link className={styles.link} to={Routes.REGISTRATION}>Go to Register page</Link>
           </p>

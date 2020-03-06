@@ -1,17 +1,23 @@
 import {Registration} from './component';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {addUser} from '../../actions';
+import {registerUser} from '../../actions';
+import {getInfoMessage} from '../../selectors';
+
+const mapStateToProps = (state) => ({
+  infoMessage: getInfoMessage(state),
+});
 
 const mapDispatchToProps = {
-  addUserDispatch: addUser,
+  registerUser,
 };
 
 Registration.propTypes = {
-  addUserDispatch: PropTypes.func,
+  registerUser: PropTypes.func,
+  infoMessage: PropTypes.string,
 };
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(Registration);

@@ -3,8 +3,8 @@
     {
       "id": 1,
       "title": "The Shawshank Redemptoin",
-      "posterUrl": "https:\/\/www.tampasdowntown.com\/wp-content\/uploads\/2019\/08\/Shawshank.Redemption_Poster.png",
-      "stars": 2,
+      "posterUrl": "https:\\/\\/www.tampasdowntown.com\\/wp-content\\/uploads\\/2019\\/08\\/Shawshank.Redemption_Poster.png",
+      "stars": "2",
       "likes": 22,
       "genres": [
         "Crime",
@@ -21,9 +21,9 @@
     {
       "id": 2,
       "title": "The Godfather",
-      "posterUrl": "https:\/\/m.media-amazon.com\/images\/M\/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
-      "stars": 4,
-      "likes": 15,
+      "posterUrl": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg",
+      "stars": "3",
+      "likes": 14,
       "genres": [
         "Crime",
         "Drama"
@@ -38,8 +38,8 @@
     },
     {
       "id": 3,
-      "title": "234234234",
-      "posterUrl": "https:\/\/ih1.redbubble.net\/image.261518158.3509\/flat,750x,075,f-pad,750x1000,f8f8f8.u4.jpg",
+      "title": "2342342341",
+      "posterUrl": "https:\\/\\/ih1.redbubble.net\\/image.261518158.3509\\/flat,750x,075,f-pad,750x1000,f8f8f8.u4.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -57,7 +57,7 @@
     {
       "id": 4,
       "title": "The Dark Knight",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "stars": 2,
       "likes": 11,
       "genres": [
@@ -76,8 +76,8 @@
     {
       "id": 5,
       "title": "12 Angry Men",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SY500_CR0,0,333,500_AL_.jpg",
-      "stars": 4,
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BODQwOTc5MDM2N15BMl5BanBnXkFtZTcwODQxNTEzNA@@._V1_SY500_CR0,0,333,500_AL_.jpg",
+      "stars": "3",
       "likes": 15,
       "genres": [
         "Drama"
@@ -93,7 +93,7 @@
     {
       "id": 6,
       "title": "Schindler's List",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,333,500_AL_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SY500_CR0,0,333,500_AL_.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -110,7 +110,7 @@
     {
       "id": 7,
       "title": "Pulp Fiction",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SY500_CR0,0,336,500_AL_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkxMTA5OTAzMl5BMl5BanBnXkFtZTgwNjA5MDc3NjE@._V1_SY500_CR0,0,336,500_AL_.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -128,7 +128,7 @@
     {
       "id": 8,
       "title": "The Lord of the Rings: The Return of the King",
-      "posterUrl": "https:\/\/lightbox-prod.imgix.net\/images\/assets\/100140981-p33156_v_v10_ab.jpg",
+      "posterUrl": "https:\\/\\/lightbox-prod.imgix.net\\/images\\/assets\\/100140981-p33156_v_v10_ab.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -147,7 +147,7 @@
     {
       "id": 9,
       "title": "Il buono, il brutto, il cattivo",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY500_CR0,0,328,500_AL_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SY500_CR0,0,328,500_AL_.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -164,7 +164,7 @@
     {
       "id": 10,
       "title": "Fight Club",
-      "posterUrl": "https:\/\/ae01.alicdn.com\/kf\/HTB1HUV7X.LrK1Rjy0Fjq6zYXFXaz\/17-Classic-Movie-Brad-Pitt-Movie-Fight-Club-Retro-Poster-Good-Kraft-Paper-Posters-Cafe-Bar.jpg_q50.jpg",
+      "posterUrl": "https://ae01.alicdn.com/kf/HTB1HUV7X.LrK1Rjy0Fjq6zYXFXaz/17-Classic-Movie-Brad-Pitt-Movie-Fight-Club-Retro-Poster-Good-Kraft-Paper-Posters-Cafe-Bar.jpg_q50.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -181,7 +181,7 @@
     {
       "id": 11,
       "title": "The Lord of the Rings: The Fellowship of the Ring",
-      "posterUrl": "https:\/\/cdn.gbposters.com\/media\/catalog\/product\/cache\/1\/image\/737x938\/9df78eab33525d08d6e5fb8d27136e95\/l\/o\/lord-of-the-rings-fellowship-of-the-ring-maxi-poster-1.143.jpg",
+      "posterUrl": "https:\\/\\/cdn.gbposters.com\\/media\\/catalog\\/product\\/cache\\/1\\/image\\/737x938\\/9df78eab33525d08d6e5fb8d27136e95\\/l\\/o\\/lord-of-the-rings-fellowship-of-the-ring-maxi-poster-1.143.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -200,7 +200,7 @@
     {
       "id": 12,
       "title": "Star Wars: Episode V - The Empire Strikes Back",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/I\/91%2BCydthCeL._SL1500_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/I/91%2BCydthCeL._SL1500_.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -217,7 +217,7 @@
     {
       "id": 13,
       "title": "Forrest Gump",
-      "posterUrl": "https:\/\/www.mauvais-genres.com\/24777\/forrest-gump-original-movie-poster-27x41-in-1994-robert-zemeckis-tom-hanks.jpg",
+      "posterUrl": "https:\\/\\/www.mauvais-genres.com\\/24777\\/forrest-gump-original-movie-poster-27x41-in-1994-robert-zemeckis-tom-hanks.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -234,7 +234,7 @@
     {
       "id": 14,
       "title": "Inception",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SY500_CR0,0,337,500_AL_.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -252,7 +252,7 @@
     {
       "id": 15,
       "title": "The Lord of the Rings: The Two Towers",
-      "posterUrl": "https:\/\/images-na.ssl-images-amazon.com\/images\/M\/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY256_SX175_AL_.jpg",
+      "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SY256_SX175_AL_.jpg",
       "stars": 4,
       "likes": 15,
       "genres": [
@@ -273,7 +273,7 @@
     {
       "id": 0,
       "name": "Tim Robbins",
-      "imgUrl":"http://cdn1-www.comingsoon.net/assets/uploads/2016/04/file_749074_Howard2.jpg",
+      "imgUrl": "http://cdn1-www.comingsoon.net/assets/uploads/2016/04/file_749074_Howard2.jpg",
       "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
     },
     {
@@ -503,6 +503,33 @@
       "name": "Ellen Page",
       "imgUrl": "http://cdn.newsapi.com.au/image/v1/9c1775e5e40482eb35a56002f5df9a9c",
       "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "Yura",
+      "password": "123"
+    },
+    {
+      "name": "zxczxc",
+      "password": "12334r",
+      "id": 1
+    },
+    {
+      "name": "zxczxc",
+      "password": "12334r",
+      "id": 2
+    },
+    {
+      "name": "Vasiliy",
+      "password": "123",
+      "id": 3
+    },
+    {
+      "name": "q",
+      "password": "q",
+      "id": 4
     }
   ]
 }

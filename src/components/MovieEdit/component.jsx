@@ -1,18 +1,18 @@
 import React from 'react';
-import {getObjByIdFromArr} from '../../utils/helpers';
+import {getObjByKeyFromArr} from '../../utils/helpers';
 import {Routes} from '../../global/constants';
 import styles from './styles.module.scss';
 
 export class MovieEdit extends React.Component {
   getMovie() {
     const {movies} = this.props;
-    const id = this.props.match.params.id;
-    return getObjByIdFromArr(movies, id);
+    const id = parseInt(this.props.match.params.id);
+    return getObjByKeyFromArr(movies, 'id', id);
   }
 
   onSubmit = (event) => {
     event.preventDefault();
-    const {editMovieDispatch} = this.props;
+    const {editMovie} = this.props;
     const movie = {...this.getMovie()};
     movie.title = this.title.value;
     movie.posterUrl = this.posterUrl.value;
@@ -20,7 +20,7 @@ export class MovieEdit extends React.Component {
     movie.genres = this.genres.value.split(', ');
     movie.description = this.description.value;
     this.props.history.push(Routes.HOMEPAGE);
-    editMovieDispatch(movie);
+    editMovie(movie);
   };
 
   onGoBack = (event) => {

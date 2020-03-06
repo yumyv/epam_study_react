@@ -1,20 +1,24 @@
 import {Homepage} from './component';
 import {connect} from 'react-redux';
-import {setBasicContent} from './actions';
+import {fetchActors, fetchMovies} from './actions';
 import PropTypes from 'prop-types';
-import {getMovies} from './selectors';
+import {getMovies, getActors} from './selectors';
 
 const mapStateToProps = (state) => ({
-  movies: getMovies(state)
+  movies: getMovies(state),
+  actors: getActors(state),
 });
 
 const mapDispatchToProps = {
-  setBasicContentDispatch: setBasicContent,
+  fetchMovies,
+  fetchActors
 };
 
 Homepage.propTypes = {
-  setBasicContentDispatch: PropTypes.func.isRequired,
-  movies: PropTypes.arrayOf(PropTypes.object)
+  fetchActors: PropTypes.func.isRequired,
+  fetchMovies: PropTypes.func.isRequired,
+  movies: PropTypes.arrayOf(PropTypes.object),
+  actors: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default connect(

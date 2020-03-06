@@ -1,17 +1,25 @@
 import {Login} from './component';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {setLoggedIn} from '../../actions';
+import {loginUser} from '../../actions';
+import {getInfoMessage, getLoggedStatus} from '../../selectors';
+
+const mapStateToProps = (state) => ({
+  infoMessage: getInfoMessage(state),
+  isLoggedIn: getLoggedStatus(state),
+});
 
 const mapDispatchToProps = {
-  setLoggedInDispatch: setLoggedIn,
+  loginUser,
 };
 
 Login.propTypes = {
-  setLoggedInDispatch: PropTypes.func,
+  loginUser: PropTypes.func,
+  infoMessage: PropTypes.string,
+  isLoggedIn: PropTypes.bool,
 };
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(Login);

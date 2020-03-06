@@ -9,12 +9,12 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  editMovieDispatch: editMovie,
+  editMovie,
 };
 
 MovieEdit.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object),
-  editMovieDispatch: PropTypes.func,
+  editMovie: PropTypes.func,
 };
 
 export default connect(

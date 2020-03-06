@@ -1,16 +1,16 @@
 import React from 'react';
 import styles from './styles.module.scss';
 import RatingStars from '../RatingStars';
-import {getObjByIdFromArr} from '../../utils/helpers';
+import {getObjByKeyFromArr} from '../../utils/helpers';
 import {Actor} from './components/Actor';
 import {Routes} from '../../global/constants';
 
 export class MovieFullCard extends React.Component {
   onDeleteMovie = () => {
-    const {deleteMovieDispatch} = this.props;
+    const {removeMovie} = this.props;
     const id = this.getMovie().id;
     this.props.history.push(Routes.HOMEPAGE);
-    deleteMovieDispatch(id);
+    removeMovie(id);
   };
 
   onEditMovie = () => {
@@ -32,8 +32,8 @@ export class MovieFullCard extends React.Component {
 
   getMovie() {
     const {movies} = this.props;
-    const id = this.props.match.params.id;
-    return getObjByIdFromArr(movies, id);
+    const id = parseInt(this.props.match.params.id);
+    return getObjByKeyFromArr(movies, 'id', id);
   }
 
   render() {

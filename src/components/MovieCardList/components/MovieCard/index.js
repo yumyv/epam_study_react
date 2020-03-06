@@ -1,14 +1,14 @@
 import {MovieCard} from './component';
 import {connect} from 'react-redux';
-import {changeCountOfLikes} from '../../../../features/homepage/actions';
+import {updateLikes} from '../../../../features/homepage/actions';
 import PropTypes from 'prop-types';
 
 const mapDispatchToProps = {
-  changeCountOfLikesDispatch: changeCountOfLikes,
+  updateLikes,
 };
 
 MovieCard.propTypes = {
-  changeCountOfLikesDispatch: PropTypes.func.isRequired,
+  updateLikes: PropTypes.func.isRequired,
   movie: PropTypes.object
 };
 

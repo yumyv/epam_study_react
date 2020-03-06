@@ -1,12 +1,12 @@
 import React from 'react';
-import {getObjByIdFromArr} from '../../utils/helpers';
+import {getObjByKeyFromArr} from '../../utils/helpers';
 import styles from './styles.module.scss';
 
 export class Actor extends React.Component {
   getActor() {
     const {actors} = this.props;
-    const id = this.props.match.params.id;
-    return getObjByIdFromArr(actors, id);
+    const id = parseInt(this.props.match.params.id);
+    return getObjByKeyFromArr(actors, 'id', id);
   }
 
   render() {

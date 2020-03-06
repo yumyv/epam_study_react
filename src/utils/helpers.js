@@ -1,3 +1,3 @@
-export const getObjByIdFromArr = (arr, id) => {
-  return arr.find(item => item.id === parseInt(id));
+export const getObjByKeyFromArr = (arr, key, value) => {
+  return arr.find(item => item[key] === value);
 };

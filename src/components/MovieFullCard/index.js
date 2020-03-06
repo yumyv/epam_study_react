@@ -2,7 +2,7 @@ import {MovieFullCard} from './component';
 import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import {getMovies, getActors} from '../../features/homepage/selectors';
-import {deleteMovie} from '../../features/homepage/actions';
+import {removeMovie} from '../../features/homepage/actions';
 
 const mapStateToProps = (state) => ({
   movies: getMovies(state),
@@ -10,13 +10,13 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = {
-  deleteMovieDispatch: deleteMovie,
+  removeMovie,
 };
 
 MovieFullCard.propTypes = {
   movies: PropTypes.arrayOf(PropTypes.object).isRequired,
   actors: PropTypes.arrayOf(PropTypes.object).isRequired,
-  deleteMovieDispatch: PropTypes.func.isRequired,
+  removeMovie: PropTypes.func.isRequired,
 };
 
 export default connect(

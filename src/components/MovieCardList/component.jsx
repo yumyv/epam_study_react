@@ -8,11 +8,11 @@ export const MovieCardList = (props) => {
 
   return (
       <section className={styles.container}>
-        {moviesForRender.map(movie =>
+        {moviesForRender ? moviesForRender.map(movie =>
             <MovieCard
                 movie={movie}
                 key={movie.id}
-            />)}
+            />):'Loading...'}
       </section>
   );
 };

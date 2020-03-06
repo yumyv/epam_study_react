@@ -1,45 +1,54 @@
-import {ADD_USER, SET_LOGGED_IN, SET_LOGGED_OUT} from './actionTypes';
+import {
+  ADD_USER, INVALID_LOGIN,
+  SET_LOGGED_IN,
+  SET_LOGGED_OUT,
+  USER_EXISTS,
+  USER_NOT_REGISTERED,
+  USER_REGISTERED
+} from './actionTypes';
+import {InfoMessages} from '../../global/constants';
 
 const initialState = {
   isLoggedIn: false,
+  infoMessage: ''
 };
 
-const addUser = (user) => {
-  let users = JSON.parse(window.localStorage.getItem('users'));
-  if (users) users.push(user);
-  else {
-    users = [];
-    users.push(user);
-  }
-  window.localStorage.setItem('users', JSON.stringify(users));
-};
-
-const getUsers = () => {
-  let users = JSON.parse(window.localStorage.getItem('users'));
-  return users?users:[];
-};
 
 export const authReducer = (state = initialState, action) => {
-  const {type, payload} = action;
+  const {type} = action;
 
   switch (type) {
     case ADD_USER:
-      const user = getUsers().find(user => user.name === payload.name);
-      if (user) {
-        return {
-          ...state
-        }
-      } else {
-        addUser(payload);
-        return {
-          ...state,
-        }
-      }
+      return {
+        ...state,
+        infoMessage: ''
+      };
+    case USER_EXISTS:
+      return {
+        ...state,
+        infoMessage: InfoMessages.USER_EXISTS
+      };
+    case USER_REGISTERED:
+      return {
+        ...state,
+        infoMessage: InfoMessages.USER_REGISTERED
+      };
+    case USER_NOT_REGISTERED:
+      return {
+        ...state,
+        infoMessage: InfoMessages.USER_NOT_REGISTERED
+      };
+    case INVALID_LOGIN:
+      return {
+        ...state,
+        infoMessage: InfoMessages.INVALID_LOGIN
+      };
     case SET_LOGGED_IN:
-      const loggedInUser = getUsers().find(
-          user => user.name === payload.name && user.password === payload.password
-      );
-      return loggedInUser?{...state, isLoggedIn: true}:{...state};
+      return {
+        ...state,
+        isLoggedIn: true,
+        infoMessage: ''
+      };
     case SET_LOGGED_OUT:
       return {
         ...state,

@@ -4,6 +4,7 @@ $btnHoverBg: #019be3;
 $btnColor: #fff;
 $hoverColor: #19b5fe;
 $linkColor: #0d47a1;
+$warningColor: #c62828;
 
 .main {
   padding: 3em;
@@ -57,4 +58,8 @@ $linkColor: #0d47a1;
 .text {
   margin-top: 2em;
   text-align: center;
+}
+
+.infoText {
+  color: $warningColor;
 }

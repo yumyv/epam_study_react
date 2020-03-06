@@ -1,15 +1,15 @@
 import {RatingStars} from './component';
 import {connect} from 'react-redux';
-import {changeCountOfStars} from '../../features/homepage/actions';
+import {updateStars} from '../../features/homepage/actions';
 import PropTypes from 'prop-types';
 
 const mapDispatchToProps = {
-  changeCountOfStarsDispatch: changeCountOfStars
+  updateStars
 };
 
 RatingStars.propTypes = {
   movie: PropTypes.object.isRequired,
-  changeCountOfStarsDispatch: PropTypes.func.isRequired
+  updateStars: PropTypes.func.isRequired
 };
 
 export default connect(
