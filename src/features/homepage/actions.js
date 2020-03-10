@@ -1,5 +1,13 @@
 import {
-  FILTER_MOVIE, SORT_BY_LIKES, SORT_BY_RATING, DELETE_MOVIE, MOVIES_LOADED, ACTORS_LOADED, UPDATE_MOVIE,
+  FILTER_MOVIE,
+  SORT_BY_LIKES,
+  SORT_BY_RATING,
+  DELETE_MOVIE,
+  MOVIES_LOADED,
+  ACTORS_LOADED,
+  UPDATE_MOVIE,
+  LOCALIZATION,
+  SET_LANGUAGE,
 } from './actionTypes';
 import {URLs} from '../../global/constants'
 
@@ -33,6 +41,16 @@ export const moviesLoaded = (payload) => ({
 
 export const actorsLoaded = (payload) => ({
   type: ACTORS_LOADED,
+  payload
+});
+
+export const setLocalization = (payload) => ({
+  type: LOCALIZATION,
+  payload
+});
+
+export const setLanguage = (payload) => ({
+  type: SET_LANGUAGE,
   payload
 });
 

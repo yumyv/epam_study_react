@@ -14,31 +14,31 @@ export class Registration extends React.Component {
   };
 
   render() {
-    const {infoMessage} = this.props;
+    const {infoMessage, language} = this.props;
 
     return (
         <main className={styles.main}>
-          <h3 className={styles.heading}>Please register</h3>
+          <h3 className={styles.heading}>{language.app_auth_registration_heading}</h3>
           <form>
             <label className={styles.label}>
               <input className={styles.input}
                      type="text"
-                     placeholder='Enter your name'
+                     placeholder={language.app_auth_registration_input_name}
                      ref={input => this.name = input}/>
             </label>
             <label className={styles.label}>
               <input className={styles.input}
                      type="password"
-                     placeholder='Enter your password'
+                     placeholder={language.app_auth_registration_input_password}
                      ref={input => this.password = input}/>
             </label>
             <div className={styles.btnContainer}>
-              <button onClick={this.onSubmit} className={styles.btn}>Register</button>
+              <button onClick={this.onSubmit} className={styles.btn}>{language.app_auth_registration_btn}</button>
             </div>
           </form>
           {infoMessage?<p className={`${styles.infoText} ${styles.text}`}>{infoMessage}</p>:''}
           <p className={styles.text}>
-            Already have account? <Link className={styles.link} to={Routes.LOGIN}>Go to Login page</Link>
+            {language.app_auth_registration_text} <Link className={styles.link} to={Routes.LOGIN}>{language.app_auth_registration_link}</Link>
           </p>
         </main>
     )

@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import MovieCard from './components/MovieCard';
 
 export const MovieCardList = (props) => {
-  const {movies, filterWord} = props;
+  const {movies, filterWord, language} = props;
   let moviesForRender = filterWord ? movies.filter((movie) => movie.title.toLowerCase() === filterWord.toLowerCase()) : movies;
 
   return (
@@ -12,7 +12,7 @@ export const MovieCardList = (props) => {
             <MovieCard
                 movie={movie}
                 key={movie.id}
-            />):'Loading...'}
+            />):language.app_movieCardList_text}
       </section>
   );
 };

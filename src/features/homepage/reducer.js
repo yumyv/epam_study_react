@@ -1,6 +1,13 @@
 import {
   FILTER_MOVIE,
-  SORT_BY_LIKES, SORT_BY_RATING, DELETE_MOVIE, UPDATE_MOVIE, MOVIES_LOADED, ACTORS_LOADED
+  SORT_BY_LIKES,
+  SORT_BY_RATING,
+  DELETE_MOVIE,
+  UPDATE_MOVIE,
+  MOVIES_LOADED,
+  ACTORS_LOADED,
+  LOCALIZATION,
+  SET_LANGUAGE
 } from './actionTypes';
 
 const initialState = {
@@ -8,7 +15,9 @@ const initialState = {
   sortedByLikesSwitcher: false,
   sortedByRatingSwitcher: false,
   filterWord: null,
-  actors: null
+  actors: null,
+  localization: 'en',
+  language: null
 };
 
 export const homepageReducer = (state = initialState, action) => {
@@ -70,6 +79,27 @@ export const homepageReducer = (state = initialState, action) => {
           sortedByRatingSwitcher: !state.sortedByRatingSwitcher
         }
       }
+    case LOCALIZATION:
+      if (payload === 'en') {
+        return {
+          ...state,
+          localization: 'en'
+        }
+      } else if (payload === 'ua') {
+        return {
+          ...state,
+          localization: 'ua'
+        }
+      } else {
+        return {
+          ...state
+        };
+      }
+    case SET_LANGUAGE:
+      return {
+        ...state,
+        language: payload
+      };
     default:
       return state;
   }

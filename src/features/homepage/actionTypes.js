@@ -5,3 +5,5 @@ export const DELETE_MOVIE = 'DELETE_MOVIE';
 export const UPDATE_MOVIE = 'UPDATE_MOVIE';
 export const MOVIES_LOADED = 'MOVIES_LOADED';
 export const ACTORS_LOADED = 'ACTORS_LOADED';
+export const LOCALIZATION = 'LOCALIZATION';
+export const SET_LANGUAGE = 'SET_LANGUAGE';
