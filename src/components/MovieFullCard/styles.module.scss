@@ -1,5 +1,14 @@
 $borderColor: rgba(25, 181, 254, 0.25);
 $headingHoverColor: #19b5fe;
+$btnBg: #19b5fe;
+$btnHoverBg: #019be3;
+$btnColor: #fff;
+
+.main {
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 50em;
+}
 
 .fullCard {
   display: flex;
@@ -26,6 +35,7 @@ $headingHoverColor: #19b5fe;
   margin: 0.5em 0.1em;
   font-size: 1.1rem;
   text-align: justify;
+  line-height: 1.5;
 }
 
 .strongText {
@@ -38,6 +48,28 @@ $headingHoverColor: #19b5fe;
   justify-content: space-around;
   padding: 0.5em;
   border-bottom: 1px solid $borderColor;
+}
+
+.btnContainer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 0.5em 2em;
+  margin-top: 2em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: $btnColor;
+  background: $btnBg;
+  border: none;
+  border-radius: 0.2em;
+
+  &:hover {
+    background: $btnHoverBg;
+  }
 }
 
 .content {

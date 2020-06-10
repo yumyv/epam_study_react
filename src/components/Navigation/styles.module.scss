@@ -1,10 +1,20 @@
 $bgColor: #0d1217;
 $linkColor: #fff;
 $linkHoverColor: #19b5fe;
+$btnBg: #19b5fe;
+$btnHoverBg: #019be3;
+$btnColor: #fff;
 
 .nav {
   padding: 1em;
   background: $bgColor;
+}
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .item {
@@ -19,5 +29,17 @@ $linkHoverColor: #19b5fe;
 
   &:hover {
     color: $linkHoverColor;
+  }
+}
+
+.btn {
+  padding: 0.2em 1.5em;
+  color: $btnColor;
+  background: $btnBg;
+  border: none;
+  border-radius: 0.2em;
+
+  &:hover {
+    background: $btnHoverBg;
   }
 }

@@ -1,5 +1,6 @@
 $borderColor: rgba(25, 181, 254, 0.25);
-$headingHoverColor: #19b5fe;
+$hoverColor: #19b5fe;
+$linkColor: #0d47a1;
 
 .movieCard {
   margin: 0.5em;
@@ -41,7 +42,7 @@ $headingHoverColor: #19b5fe;
 .counter {
   padding: 0.3em 0.1em;
   text-align: center;
-  color: $headingHoverColor;
+  color: $hoverColor;
   border-top: 1px solid $borderColor;;
 }
 
@@ -54,10 +55,6 @@ $headingHoverColor: #19b5fe;
   margin: 0.5em;
   font-size: 1.3rem;
   cursor: pointer;
-
-  &:hover {
-    color: $headingHoverColor;
-  }
 }
 
 .img {
@@ -70,4 +67,13 @@ $headingHoverColor: #19b5fe;
   justify-content: space-around;
   padding: 0.5em;
   border-top: 1px solid $borderColor;
+}
+
+.link {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover {
+    color: $hoverColor;
+  }
 }

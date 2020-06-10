@@ -2,27 +2,26 @@ import React from 'react';
 import styles from './styles.module.scss';
 import SearchImg from '../../../../global/img/search.png';
 
-export class FilterMovies extends React.Component {
-  filterWord = '';
+export const FilterMovies = (props) => {
+  let filterWord = '';
 
-  onFilterWordChange = (event) => {
-    this.filterWord = event.target.value;
+  const onFilterWordChange = ({target}) => {
+    filterWord = target.value;
   };
 
-  onFilterClick = () => {
-    const {filterMovies} = this.props;
-    filterMovies(this.filterWord);
+  const onFilterClick = () => {
+    const {filterMoviesDispatch} = props;
+    filterMoviesDispatch(filterWord);
   };
 
-  render() {
+  const {language} = props;
 
-    return (
-        <div className={styles.inputContainer}>
-          <div className={styles.inputWrapper}>
-            <input onChange={this.onFilterWordChange} className={styles.input} type="text" placeholder="Search by name"/>
-            <img onClick={this.onFilterClick} className={styles.searchImg} src={SearchImg} alt="search"/>
-          </div>
+  return (
+      <div className={styles.inputContainer}>
+        <div className={styles.inputWrapper}>
+          <input onChange={onFilterWordChange} className={styles.input} type="text" placeholder={language.app_homepage_filterMovies_search}/>
+          <img onClick={onFilterClick} className={styles.searchImg} src={SearchImg} alt="search"/>
         </div>
-    );
-  }
-}
+      </div>
+  );
+};
